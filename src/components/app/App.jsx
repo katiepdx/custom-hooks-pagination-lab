@@ -27,7 +27,7 @@ export default function App() {
             render={(routerProps) => <AllCharactersPage {...routerProps} />}
           />
           <Route
-            exact path="/details/"
+            exact path="/details/:id"
             render={(routerProps) => <CharacterDetailPage {...routerProps} />}
           />
         </Switch>

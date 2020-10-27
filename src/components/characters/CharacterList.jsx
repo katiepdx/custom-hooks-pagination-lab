@@ -4,6 +4,7 @@
 import React from 'react'
 import { useAllCharacters } from '../../hooks/charactersHooks'
 import SingleCharacter from './SingleCharacter'
+import { Link } from 'react-router-dom'
 
 const CharacterList = () => {
   // get the loading and character state from useAllCharacters hook 
@@ -16,7 +17,9 @@ const CharacterList = () => {
   const allCharactersEls = allCharacters.map(character => (
     <div key={character.name}>
       {/* spread props from character so SingleCharacter can use them */}
-      <SingleCharacter {...character} />
+      <Link to={`/details/${character.id}`}>
+        <SingleCharacter {...character} />
+      </Link>
     </div>
   ))
 

@@ -3,6 +3,7 @@ import React from 'react'
 import { render, screen, waitFor } from '@testing-library/react'
 import CharacterList from './CharacterList'
 import { getAllCharacters } from '../../services/rickAndMorty-api'
+import { MemoryRouter } from 'react-router-dom'
 
 // jest mock api call
 jest.mock('../../services/rickAndMorty-api')
@@ -137,7 +138,7 @@ describe('CharacterList component test', () => {
     getAllCharacters.mockResolvedValue(data)
 
     // render the CharacterList component
-    render(<CharacterList />)
+    render(<MemoryRouter><CharacterList /></MemoryRouter>)
 
     // grab the loading screen message 
     screen.getByText('Your page is still loading')
