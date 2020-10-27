@@ -7,7 +7,6 @@ const SingleCharacter = ({ image, name }) => {
   // return a div for a single character
   return (
     <div>
-      <h3>You choose {name}!</h3>
       <img src={image} alt={name} />
       <p>This is {name}</p>
     </div>

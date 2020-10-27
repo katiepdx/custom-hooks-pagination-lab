@@ -1,6 +1,5 @@
 // list all characters - image (with alt) and name
 // uses custom hooks
-// mock test
 
 import React from 'react'
 import { useAllCharacters } from '../../hooks/charactersHooks'
@@ -15,7 +14,7 @@ const CharacterList = () => {
 
   // using the characters in state from hook, map through array and use SingleCharacter componen to display them to the page
   const allCharactersEls = allCharacters.map(character => (
-    <div>
+    <div key={character.name}>
       {/* spread props from character so SingleCharacter can use them */}
       <SingleCharacter {...character} />
     </div>
@@ -23,7 +22,7 @@ const CharacterList = () => {
 
   // return the list of allCharactersEls
   return (
-    <section>
+    <section data-testid="all-characters-list">
       {allCharactersEls}
     </section>
   )
