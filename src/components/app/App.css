@@ -1,0 +1,11 @@
+h1 {
+  background-color: aquamarine;
+}
+
+nav {
+  display: flex;
+  background-color: rgb(150, 253, 155);
+  list-style: none;
+  justify-content: space-evenly;
+  padding: 2rem;
+}

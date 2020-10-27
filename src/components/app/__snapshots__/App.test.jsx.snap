@@ -3,7 +3,26 @@
 exports[`App component renders App 1`] = `
 <DocumentFragment>
   <h1>
-    Hello World
+    Custom React Hooks and Pagination Lab!
   </h1>
+  <nav>
+    <li>
+      <a
+        href="/"
+      >
+        Character List
+      </a>
+    </li>
+    <li>
+      <a
+        href="/details"
+      >
+        Character Details
+      </a>
+    </li>
+  </nav>
+  <div>
+    AllCharactersPage
+  </div>
 </DocumentFragment>
 `;
