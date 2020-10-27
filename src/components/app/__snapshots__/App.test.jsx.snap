@@ -21,8 +21,8 @@ exports[`App component renders App 1`] = `
       </a>
     </li>
   </nav>
-  <div>
-    AllCharactersPage
-  </div>
+  <h1>
+     Here are all the characters
+  </h1>
 </DocumentFragment>
 `;

@@ -5,8 +5,8 @@ import {
   Switch,
   Link
 } from 'react-router-dom'
-import AllCharactersPage from './pages/AllCharactersPage'
-import CharacterDetailPage from './pages/CharacterDetailPage';
+import AllCharactersPage from '../../pages/AllCharactersPage'
+import CharacterDetailPage from '../../pages/CharacterDetailPage';
 import './App.css'
 
 // set up router nav links

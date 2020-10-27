@@ -6,9 +6,9 @@ import PropTypes from 'prop-types'
 
 const AllCharactersPage = props => {
   return (
-    <div>
-      AllCharactersPage
-    </div>
+    <>
+      <h1> Here are all the characters</h1>
+    </>
   )
 }
 
