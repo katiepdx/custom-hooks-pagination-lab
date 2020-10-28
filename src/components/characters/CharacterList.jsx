@@ -17,7 +17,7 @@ const CharacterList = ({ pageCount }) => {
 
   // using the characters in state from hook, map through array and use SingleCharacter componen to display them to the page
   const allCharactersEls = allCharacters.map(character => (
-    <div key={character.name}>
+    <div key={character.id}>
       {/* spread props from character so SingleCharacter can use them */}
       <Link to={`/details/${character.id}`}>
         <SingleCharacter {...character} />
