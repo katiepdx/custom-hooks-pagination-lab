@@ -6,6 +6,7 @@ import { useAllCharacters } from '../../hooks/charactersHooks'
 import SingleCharacter from './SingleCharacter'
 import { Link } from 'react-router-dom'
 import propTypes from 'prop-types'
+import styles from './CharacterList.css'
 
 // page pageCount for useAllCharacters to use
 const CharacterList = ({ pageCount }) => {
@@ -27,7 +28,9 @@ const CharacterList = ({ pageCount }) => {
 
   // return the list of allCharactersEls
   return (
-    <section data-testid="all-characters-list">
+    <section
+      className={styles.characterList}
+      data-testid="all-characters-list">
       {allCharactersEls}
     </section>
   )
