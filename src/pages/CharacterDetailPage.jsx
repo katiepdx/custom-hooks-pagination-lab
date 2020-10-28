@@ -1,19 +1,10 @@
-// character detail page - id, name, gender, status, species, and image
-// uses custom hooks
-
 import React from 'react'
-import PropTypes from 'prop-types'
+import CharacterDetails from '../components/character-details/CharacterDetails'
 
-const CharacterDetailPage = props => {
+const CharacterDetailPage = () => {
   return (
-    <div>
-      CharacterDetailPage
-    </div>
+    <CharacterDetails />
   )
-}
-
-CharacterDetailPage.propTypes = {
-
 }
 
 export default CharacterDetailPage

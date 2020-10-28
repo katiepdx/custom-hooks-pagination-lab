@@ -1,8 +1,6 @@
-// rick and morty api logic
-
 // getAllCharacters - returns an array of objects (characters {id, name and image})
-export const getAllCharacters = async () => {
-  const res = await fetch('https://rickandmortyapi.com/api/character')
+export const getAllCharacters = async (pageCount) => {
+  const res = await fetch(`https://rickandmortyapi.com/api/character/?page=${pageCount}`)
   const json = await res.json()
   const data = json.results
 
@@ -22,4 +20,25 @@ export const getAllCharacters = async () => {
   return allCharacters
 }
 
-// getCharacterById(id) hook - returns a single character object { id, name, gender, status, species, and image }
+// getCharacterById - returns a single character object { id, name, gender, status, species, and image }
+export const getCharacterById = async (id) => {
+  const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`)
+  const json = await res.json()
+  const data = json.results
+
+  if (!res.ok) throw 'Error, cannot fetch from api'
+
+  // id, name, gender, status, species, and image
+  const singleCharacter = {
+    id: data.id,
+    name: data.name,
+    gender: data.gender,
+    status: data.status,
+    species: data.species,
+    image: data.image
+  }
+
+  console.log(singleCharacter, 'SINGLE CHARACTER FROM API FILE')
+  // send back single character obj
+  return singleCharacter
+}

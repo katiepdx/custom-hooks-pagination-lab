@@ -5,10 +5,12 @@ import React from 'react'
 import { useAllCharacters } from '../../hooks/charactersHooks'
 import SingleCharacter from './SingleCharacter'
 import { Link } from 'react-router-dom'
+import propTypes from 'prop-types'
 
-const CharacterList = () => {
+// page pageCount for useAllCharacters to use
+const CharacterList = ({ pageCount }) => {
   // get the loading and character state from useAllCharacters hook 
-  const { loading, allCharacters } = useAllCharacters()
+  const { loading, allCharacters } = useAllCharacters(pageCount)
 
   // display a loading message if loading is true from hook 
   if (loading) return <h1>Your page is still loading</h1>
@@ -29,6 +31,10 @@ const CharacterList = () => {
       {allCharactersEls}
     </section>
   )
+}
+
+CharacterList.propTypes = {
+  pageCount: propTypes.number
 }
 
 export default CharacterList
