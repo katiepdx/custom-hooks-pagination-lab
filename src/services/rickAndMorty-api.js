@@ -22,9 +22,10 @@ export const getAllCharacters = async (pageCount) => {
 
 // getCharacterById - returns a single character object { id, name, gender, status, species, and image }
 export const getCharacterById = async (id) => {
+  console.log(id, 'API')
+
   const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`)
-  const json = await res.json()
-  const data = json.results
+  const data = await res.json()
 
   if (!res.ok) throw 'Error, cannot fetch from api'
 

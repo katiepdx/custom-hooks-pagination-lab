@@ -28,12 +28,13 @@ export const useAllCharacters = (pageCount) => {
 // useCharacterById pass id hook - returns loading state and singleCharacter
 export const useCharacterById = (id) => {
   // set loading state and singleCharacter state
+  console.log(id, 'hook')
   const [loading, setLoading] = useState(true)
   const [singleCharacter, setSingleCharacter] = useState([])
 
   // use getCharacterById api fetch 
   // pass id as second arg so useEffect runs when id changes
-  useEffect(async (id) => {
+  useEffect(async () => {
     const singleCharacter = await getCharacterById(id)
     setSingleCharacter(singleCharacter)
     setLoading(false)
